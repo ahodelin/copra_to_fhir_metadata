@@ -3,31 +3,26 @@
 \subsection{Arterieller Druck} 
 \noindent Version 1.0.0
 
-\noindent Profile: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/ArteriellerDruckObservation.html}
+\noindent Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/ArteriellerDruckObservation.html}
 
-\noindent Input:
 \begin{itemize}
-	\item Datensatz aus \texttt{co6\_config\_variables}, \texttt{co6\_medic\_patient}, \\ \texttt{
-co6\_data\_decimal\_6\_3}
+\item Input: Datensatz aus \texttt{co6\_data\_decimal\_6\_3}
+\item Output: \ac{fhir}-Ressource der Kategorie \glqq Observation\grqq{}
 \end{itemize}
-Output:
-\begin{itemize}
-        \item \ac{fhir}-Ressource der Kategorie \glqq Observation\grqq{}
-\end{itemize}
+
 \begin{longtable}{|l|l|p{7.5cm}|}
         \hline
         \rowcolor{lightgray} \multicolumn{3}{|l|}{Data Mapping (inhaltlich)} \\ \hline
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
-	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
-Arterieller-Druck} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	meta & profile & https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/arterieller-druck \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 182744004 \\ \hline
 	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
 	\cline{3-3} 
 	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
-	 \textbf{subject}  & reference & Pseudonymisierte Patientennummer: \texttt{co6\_medic\_patient.patid} \\ \hline
+	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & value & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
         \cline{2-3}
@@ -36,42 +31,33 @@ co6\_data\_decimal\_6\_3.val} \\
          & code &
 mm[Hg]
 \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
-co6\_data\_decimal\_6\_3.datetimeto} \\
-    \cline{2-3}
-     & end & Datum und Uhrzeit am Ende der Messung: \texttt{
+     \textbf{effectiveDateTime}  &  & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
-
 
 \subsection{Atemfrequenz} 
 \noindent Version 1.0.0
 
-\noindent Profile: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/AtemfrequenzObservation.html}
+\noindent Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/AtemfrequenzObservation.html}
 
-\noindent Input:
 \begin{itemize}
-	\item Datensatz aus \texttt{co6\_config\_variables}, \texttt{co6\_medic\_patient}, \\ \texttt{
-co6\_data\_decimal\_6\_3}
+\item Input: Datensatz aus \texttt{co6\_data\_decimal\_6\_3}
+\item Output: \ac{fhir}-Ressource der Kategorie \glqq Observation\grqq{}
 \end{itemize}
-Output:
-\begin{itemize}
-        \item \ac{fhir}-Ressource der Kategorie \glqq Observation\grqq{}
-\end{itemize}
+
 \begin{longtable}{|l|l|p{7.5cm}|}
         \hline
         \rowcolor{lightgray} \multicolumn{3}{|l|}{Data Mapping (inhaltlich)} \\ \hline
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
-	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
-Atemfrequenz} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	meta & profile & https://www.medizininformatik.de/fhir/ ext/modul-icu/StructureDefinition/ atemfrequenz \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs\\ \hline
 	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
 	\cline{3-3} 
 	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
-	 \textbf{subject}  & reference & Pseudonymisierte Patientennummer: \texttt{co6\_medic\_patient.patid} \\ \hline
+	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & value & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
         \cline{2-3}
@@ -79,43 +65,35 @@ co6\_data\_decimal\_6\_3.val} \\
          \cline{2-3}
          & code & /min
 \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
-co6\_data\_decimal\_6\_3.datetimeto} \\
-    \cline{2-3}
-     & end & Datum und Uhrzeit am Ende der Messung: \texttt{
+     \textbf{effectiveDateTime}  & & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-
-\subsection{
-Atemzugvolumen-Waehrend-Beatmung} 
+\subsection{Atemzugvolumen-Einstellung} 
 \noindent Version 1.0.0
 
-\noindent Profile: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Atemzugvolumen-Waehrend-BeatmungObservation.html}
+\noindent Profile: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Atemzugvolumen-EinstellungObservation.html}
 
-\noindent Input:
 \begin{itemize}
-	\item Datensatz aus \texttt{co6\_config\_variables}, \texttt{co6\_medic\_patient}, \\ \texttt{
-co6\_data\_decimal\_6\_3}
+\item Input: Datensatz aus \texttt{co6\_data\_decimal\_6\_3}
+\item Output: \ac{fhir}-Ressource der Kategorie \glqq Observation\grqq{}
 \end{itemize}
-Output:
-\begin{itemize}
-        \item \ac{fhir}-Ressource der Kategorie \glqq Observation\grqq{}
-\end{itemize}
+
+\newpage
+
 \begin{longtable}{|l|l|p{7.5cm}|}
         \hline
         \rowcolor{lightgray} \multicolumn{3}{|l|}{Data Mapping (inhaltlich)} \\ \hline
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
-	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
-Atemzugvolumen-Waehrend-Beatmung} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	meta & profile & https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/atemzugvolumen-einstellung \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
 	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
 	\cline{3-3} 
 	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
-	 \textbf{subject}  & reference & Pseudonymisierte Patientennummer: \texttt{co6\_medic\_patient.patid} \\ \hline
+	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & value & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
         \cline{2-3}
@@ -123,11 +101,9 @@ co6\_data\_decimal\_6\_3.val} \\
          \cline{2-3}
          & code & mL
 \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
-    \cline{2-3}
-     & end & Datum und Uhrzeit am Ende der Messung: \texttt{
-co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
+     \hline
 \end{longtable}
 
 
@@ -136,29 +112,26 @@ co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 
 \noindent Profile: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Beatmungsvolumen-Pro-Minute-Machineller-BeatmungObservation.html}
 
-\noindent Input:
 \begin{itemize}
-	\item Datensatz aus \texttt{co6\_config\_variables}, \texttt{co6\_medic\_patient}, \\ \texttt{
-co6\_data\_decimal\_6\_3}
+\item Input: Datensatz aus \texttt{co6\_data\_decimal\_6\_3}
+\item Output: \ac{fhir}-Ressource der Kategorie \glqq Observation\grqq{}
 \end{itemize}
-Output:
-\begin{itemize}
-        \item \ac{fhir}-Ressource der Kategorie \glqq Observation\grqq{}
-\end{itemize}
+
+\newpage
+
 \begin{longtable}{|l|l|p{7.5cm}|}
         \hline
         \rowcolor{lightgray} \multicolumn{3}{|l|}{Data Mapping (inhaltlich)} \\ \hline
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
-	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
-Beatmungsvolumen-Pro-Minute-Machineller-Beatmung} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	meta & profile & https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/beatmungsvolumen-pro-minute-maschineller-beatmung \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
 	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
 	\cline{3-3} 
 	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
-	 \textbf{subject}  & reference & Pseudonymisierte Patientennummer: \texttt{co6\_medic\_patient.patid} \\ \hline
+	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & value & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
         \cline{2-3}
@@ -167,11 +140,48 @@ co6\_data\_decimal\_6\_3.val} \\
          & code &
 L/min
 \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
-    \cline{2-3}
-     & end & Datum und Uhrzeit am Ende der Messung: \texttt{
-co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
+     \hline
+\end{longtable}
+
+
+\subsection{Beatmungsvolumenzeit auf hohem Druck} 
+\noindent Version 1.0.0
+
+\noindent Profile: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/BeatmungszeitaufhohemDruckObservation.html}
+
+\begin{itemize}
+	\item Input: Datensatz aus \texttt{co6\_data\_decimal\_6\_3}
+	\item Output: \ac{fhir}-Ressource der Kategorie \glqq Observation\grqq{}
+\end{itemize}
+
+\newpage
+
+\begin{longtable}{|l|l|p{7.5cm}|}
+	\hline
+	\rowcolor{lightgray} \multicolumn{3}{|l|}{Data Mapping (inhaltlich)} \\ \hline
+	\textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
+	meta & profile & https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/beatmungszeit-hohem-druck \\ \hline 
+	status &  & final   \\ \hline 
+	category & coding & system: \url{http://snomed.info/sct} \\
+	\cline{3-3}
+	& & code: 40617009 \\ \hline
+	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	\cline{3-3} 
+	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
+	\textbf{valueQuantity}  & value & Wert der Messung: \texttt{
+		co6\_data\_decimal\_6\_3.val} \\
+	\cline{2-3}
+	& system & http://unitsofmeasure.org \\
+	\cline{2-3}
+	& code &
+	L/min
+	\\ \hline
+	\textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
+		co6\_data\_decimal\_6\_3.datetimeto} \\
+	\hline
 \end{longtable}
 
 
@@ -195,7 +205,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Blutfluss-durch-cardiovasculaeres-Geraet} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 182744004 \\ \hline
@@ -210,7 +220,7 @@ co6\_data\_decimal\_6\_3.val} \\
          \cline{2-3}
          & code & L/min
 \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -238,7 +248,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Druckdifferenz-Beatmung} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
@@ -254,7 +264,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & code &
 cm[H2O]
 \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -282,7 +292,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Einstellung-Einatmungszeit-Beatmung} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009\\ \hline
@@ -298,7 +308,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & code &
 s
 \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -326,7 +336,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Exspiratorischer-Gasfluss} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
@@ -340,7 +350,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & L/min \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -367,7 +377,7 @@ Output:
         \rowcolor{lightgray} \multicolumn{3}{|l|}{Data Mapping (inhaltlich)} \\ \hline
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{Herzfrequenz} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs\\ \hline
@@ -381,7 +391,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & /min \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -409,7 +419,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Herzzeitvolumen} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
@@ -425,7 +435,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & code &
 L/min
 \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -453,7 +463,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Inspiratorischer-Gasfluss} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
@@ -468,7 +478,7 @@ co6\_data\_decimal\_6\_3.val} \\
          \cline{2-3}
          & code & L/min
 \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -496,7 +506,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Intrakranieller-Druck-(ICP)} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
@@ -510,7 +520,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & mm[Hg] \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -538,7 +548,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Ionisiertes-Kalzium-aus-Nierenersatzverfahren} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 182744004 \\ \hline
@@ -552,7 +562,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & mmol/L \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -581,7 +591,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Koerpergewicht} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
@@ -595,7 +605,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & kg \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -624,7 +634,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Koerpergroesse} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
@@ -638,7 +648,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & cm \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -666,7 +676,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Koerpertemperatur-Kern} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
@@ -680,7 +690,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & Cel \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -708,7 +718,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Kopfumfang} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
@@ -722,7 +732,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & cm \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -751,7 +761,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Linksatrialer-Druck} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
@@ -765,7 +775,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & mm[Hg] \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -793,7 +803,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Linksventrikulaerer-Schlagvolumenindex} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
@@ -807,7 +817,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & mL/m2 \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
@@ -835,7 +845,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Mechanische-Atemfrequenz-Beatmet} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
@@ -849,7 +859,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & {Breaths}/min \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -877,7 +887,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Mittlerer-Beatmungsdruck} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
@@ -890,7 +900,7 @@ Mittlerer-Beatmungsdruck} \\ \hline
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & cm[H2O] \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -918,7 +928,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Positiv-endexpiratorischer-Druck} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
@@ -931,7 +941,7 @@ Positiv-endexpiratorischer-Druck} \\ \hline
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & cm[H2O] \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -960,7 +970,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Pulmonalarterieller-wedge-Blutdruck} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs\\ \hline
@@ -974,7 +984,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & mm[Hg] \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -1002,7 +1012,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Sauerstofffraktion} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
@@ -1016,7 +1026,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{co6\_data\_decimal\_6\_3.datetimeto} \\
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
@@ -1042,7 +1052,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Sauerstofffraktion-eingestellt} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
@@ -1056,7 +1066,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -1084,7 +1094,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Sauerstoffgasfluss} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 182744004 \\ \hline
@@ -1098,7 +1108,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & L/min \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -1126,7 +1136,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Sauerstoffsaettigung-im-art.-Blut-durch-Pulsoxymetrie} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
@@ -1140,7 +1150,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & \% \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -1168,7 +1178,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Spontane-Atemfrequenz-Beatmet} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
@@ -1182,7 +1192,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & /min \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -1210,7 +1220,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Spontane-Mechanische-Atemfrequenz-Beatmet} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
@@ -1224,7 +1234,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & /min \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -1252,7 +1262,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Substituatfluss} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 182744004 \\ \hline
@@ -1266,7 +1276,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & mL/h \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -1294,7 +1304,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Venoeser-Druck} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 182744004 \\ \hline
@@ -1308,7 +1318,7 @@ co6\_data\_decimal\_6\_3.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & mm[Hg] \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -1336,7 +1346,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_string.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Zeitverhaeltnis-Ein-Ausatmung} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
@@ -1350,7 +1360,7 @@ co6\_data\_string.val} \\
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & {ratio} \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_string.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{
@@ -1378,7 +1388,7 @@ Output:
         \textbf{id} &  & \texttt{co6\_data\_decimal\_6\_3.id} \\ \hline
 	meta & profile & https://medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/\textbf{
 Zentralvenoeser-Druck-(ZVD)} \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final   \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
@@ -1391,7 +1401,7 @@ Zentralvenoeser-Druck-(ZVD)} \\ \hline
          & system & http://unitsofmeasure.org \\
          \cline{2-3}
          & code & mm[Hg] \\ \hline
-     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit am Anfang der Messung: \texttt{
+     \textbf{effectiveDateTime}  & start & Datum und Uhrzeit der Messung: \texttt{
 co6\_data\_decimal\_6\_3.datetimeto} \\
     \cline{2-3}
      & end & Datum und Uhrzeit am Ende der Messung: \texttt{

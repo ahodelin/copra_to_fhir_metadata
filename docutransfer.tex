@@ -30,15 +30,13 @@ Die benötigte Daten an der Universitätsmedizin Mainz für die Erzeugung der \a
 
 \noindent Profile: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/IGMIIKDSModulICU.html}
 
-\noindent Version 1.0.0
+\noindent Version: 1.0.0
 
-\noindent Input:
+\subsubsection{Nummerische Werte} \label{subsub:numbvalues}
 \begin{itemize}
-	\item Datensatz aus \texttt{co6\_config\_variables}, \texttt{co6\_data\_decimal\_6\_3} \\ und \texttt{co6\_data\_string}
-\end{itemize}
-Output:
-\begin{itemize}
-	\item \ac{fhir}-Profile der Kategorie \glqq Observation\grqq{} - nummerische Werte %und String Werte
+\item Input: Datensatz aus \texttt{co6\_data\_decimal\_6\_3} und \texttt{co6\_data\_string}
+
+\item Output: \ac{fhir}-Ressourcen der Kategorie \glqq Observation\grqq{} - nummerische Werte
 \end{itemize}
 
 \noindent \textbf{Anmerkung}: die fett geschriebenen Begriffe sind Informationen oder Teilinformationen die in \ac{copra} zu finden sind. 
@@ -61,19 +59,16 @@ Output:
 	 & system & http://unitsofmeasure.org \\ 
 	 \cline{2-3}
 	 & \textbf{code} & Mapping auf http://unitsofmeasure.org. (\texttt{mapping\_mii\_co6\_to\_transfer.profile \_unit}) z.B. °C - Cel: \texttt{co6\_config\_variables.unit} \\ \hline
-    \textbf{effectiveDateTime} & & Datum und Uhrzeit der Messung: \texttt{co6\_data\_decimal\_6\_3.datetimeto}  \\ \hline
+    \textbf{effectiveDateTime} & & Datum und Uhrzeit der Messung: \texttt{co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\vspace{4mm}
+\subsubsection{Blutdruck Werte} \label{subsub:bloodpressure}
 
-\noindent Input:
 \begin{itemize}
-	\item Datensatz aus \texttt{co6\_ config\_variables}, \texttt{co6\_medic\_pressure} \\ und \texttt{co6\_data\_string}
+\item Input: Datensatz aus \texttt{co6\_medic\_pressure} und \texttt{co6\_data\_string}
+\item Output: \ac{fhir}-Ressourcen der Kategorie \glqq Observation\grqq{} - Blutdruckmessungen
 \end{itemize}
-Output:
-\begin{itemize}
-	\item \ac{fhir}-Profile der Kategorie \glqq Observation\grqq{} - Blutdruckmessungen
-\end{itemize}
+
 \begin{longtable}{|l|l|p{7cm}|} 
 	\hline
 	\rowcolor{lightgray} \multicolumn{3}{|l|}{Data Mapping (inhaltlich) - Blutdruckmessungen} \\ \hline
