@@ -1,107 +1,90 @@
-\subsection{Blutdruck} 
-\noindent Version 1.0.0
+\subsection{Blutdruckwerte}
 
-\noindent Profile: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/BlutdruckObservation.html}
+\subsubsection{Blutdruck}
 
-\noindent Input:
-\begin{itemize}
-	\item Datensatz aus \texttt{co6\_config\_variables}, \texttt{co6\_medic\_patient}, \\ \texttt{co6\_medic\_pressure}
-\end{itemize}
-Output:
-\begin{itemize}
-        \item \ac{fhir}-Ressource der Kategorie \glqq Observation\grqq{}
-\end{itemize}
+Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/BlutdruckObservation-duplicate-3.html}
+
 \begin{longtable}{|l|l|p{7.5cm}|}
         \hline
         \rowcolor{lightgray} \multicolumn{3}{|l|}{Data Mapping (inhaltlich)} \\ \hline
-        id &  & \texttt{co6\_medic\_pressure.id} \\ \hline
+        \textbf{id} &  & \texttt{co6\_medic\_pressure.id} \\ \hline
 	meta & profile & https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/blutdruck \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status &  & final  \\ \hline 
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\ 
 \cline{3-3}
         & & code: vital-signs \\ \hline
         code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\
         \cline{3-3}
          &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
-        subject & reference & Pseudonymisierte Patientennummer: \texttt{co6\_medic\_patient.patid} \\ \hline
-        effectiveDateTime & & Datum und Uhrzeit der Messung:  \texttt{co6\_medic\_pressure.datetimeto} \\ \hline
+        \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
+        \textbf{effectiveDateTime} & & Datum und Uhrzeit der Messung:  \texttt{co6\_medic\_pressure.datetimeto} \\ \hline
 	\multicolumn{3}{|l|}{component} \\ \hline
 	code (Systolisch)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
 	\cline{3-3} 
 	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
-	valueQuantity & value & \texttt{co6\_medic\_pressure.systolic} \\
+	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.systolic} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
 	\cline{2-3}
-	& code & mm[Hg] \\ \hline
+	& \textbf{code} & mm[Hg] - \texttt{co6\_config\_variables.unit} \\ \hline
 	code (Mittel)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
 	\cline{3-3} 
 	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
-	valueQuantity & value & \texttt{co6\_medic\_pressure.mean} \\
+	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.mean} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
 	\cline{2-3}
-	& code &  mm[Hg] \\ \hline
+	& \textbf{code} &  mm[Hg] - \texttt{co6\_config\_variables.unit} \\ \hline
 	code (Diastolisch)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
 	\cline{3-3} 
 	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
-	valueQuantity & value & \texttt{co6\_medic\_pressure.diastolic} \\
+	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.diastolic} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
 	\cline{2-3}
-	& code & mm[Hg] \\ \hline
+	& \textbf{code} & mm[Hg] - \texttt{co6\_config\_variables.unit} \\ \hline
 \end{longtable}
 
-\subsection{Pulmonalarterieller Blutdruck} 
-\noindent Version 1.0.0
+\subsubsection{Pulmonalarterieller Blutdruck} 
+ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/PulmonalarteriellerBlutdruckObservation.html}
 
-\noindent Profile: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/PulmonalarteriellerBlutdruckObservation.html}
-
-\noindent Input:
-\begin{itemize}
-	\item Datensatz aus \texttt{co6\_config\_variables}, \texttt{co6\_medic\_patient}, \\ \texttt{co6\_medic\_pressure}
-\end{itemize}
-Output:
-\begin{itemize}
-        \item \ac{fhir}-Ressource der Kategorie \glqq Observation\grqq{}
-\end{itemize}
 \begin{longtable}{|l|l|p{7.5cm}|}
         \hline
         \rowcolor{lightgray} \multicolumn{3}{|l|}{Data Mapping (inhaltlich)} \\ \hline
-        id &  & \texttt{co6\_medic\_pressure.id} \\ \hline
+        \textbf{id} &  & \texttt{co6\_medic\_pressure.id} \\ \hline
 	meta & profile & https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/pulmonalarterieller-blutdruck \\ \hline 
-	status &  & in Abstimmung  \\ \hline 
+	status & & final  \\ \hline 
 	category & coding & system:  \\ 
 \cline{3-3}
         & & code:  \\ \hline
         code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\
         \cline{3-3}
-         &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
-        subject & reference & Pseudonymisierte Patientennummer: \texttt{co6\_medic\_patient.patid} \\ \hline
-        effectiveDateTime & & Datum und Uhrzeit der Messung:  \texttt{co6\_medic\_pressure.datetimeto} \\ \hline
+         & & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+        \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
+        \textbf{effectiveDateTime} & & Datum und Uhrzeit der Messung:  \texttt{co6\_medic\_pressure.datetimeto} \\ \hline
 	\multicolumn{3}{|l|}{component} \\ \hline
 	code (Systolisch)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
 	\cline{3-3} 
 	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
-	valueQuantity & value & \texttt{co6\_medic\_pressure.systolic} \\
+	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.systolic} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
 	\cline{2-3}
-	& code & mm[Hg] \\ \hline
+	& \textbf{code} & mm[Hg] - \texttt{co6\_config\_variables.unit} \\ \hline
 	code (Mittel)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
 	\cline{3-3} 
 	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
-	valueQuantity & value & \texttt{co6\_medic\_pressure.mean} \\
+	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.mean} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
 	\cline{2-3}
-	& code &  mm[Hg] \\ \hline
+	& \textbf{code} &  mm[Hg] - \texttt{co6\_config\_variables.unit} \\ \hline
 	code (Diastolisch)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
 	\cline{3-3} 
 	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
-	valueQuantity & value & \texttt{co6\_medic\_pressure.diastolic} \\
+	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.diastolic} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
 	\cline{2-3}
-	& code & mm[Hg] \\ \hline
+	& \textbf{code} & mm[Hg] - \texttt{co6\_config\_variables.unit} \\ \hline
 \end{longtable}

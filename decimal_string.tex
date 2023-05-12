@@ -1,6 +1,8 @@
 \section{Profile} \label{sec:profil}
 
-\subsection{Arterieller Druck} 
+\subsection{Nummerische Werte}
+
+\subsubsection{Arterieller Druck} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/ArteriellerDruckObservation.html}
 
@@ -13,9 +15,9 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 182744004 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://snomed.info/sct} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	 &  & code: 386534000 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -29,7 +31,7 @@ mm[Hg] - \texttt{co6\_config\_variables.unit}
 co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Atemfrequenz} 
+\subsubsection{Atemfrequenz} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/AtemfrequenzObservation.html}
 
@@ -42,9 +44,13 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs\\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://snomed.info/sct} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	 &  & code: 86290005 \\ 
+	 \cline{3-3} 
+	 &  & system: \url{http://loinc.org} \\ 
+	 \cline{3-3} 
+	 &  & code: 9279-1 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -57,7 +63,7 @@ co6\_data\_decimal\_6\_3.val} \\
 co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Atemzugvolumen-Einstellung} 
+\subsubsection{Atemzugvolumen-Einstellung} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Atemzugvolumen-EinstellungObservation.html}
 
@@ -70,9 +76,17 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	 &  & code: 20112-9 \\ 
+	 \cline{3-3} 
+	 &  & system: \url{http://snomed.info/sct} \\ 
+	 \cline{3-3} 
+	 &  & code: 416811008 \\ 
+	 \cline{3-3} 
+	 &  & system: urn:iso:std:iso:11073:10101 \\ 
+	 \cline{3-3}
+	 &  & code: 16929196 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -87,7 +101,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\
 \end{longtable}
 
 
-\subsection{Beatmungsvolumen-Pro-Minute-Machineller-Beatmung} 
+\subsubsection{Beatmungsvolumen-Pro-Minute-Machineller-Beatmung} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Beatmungsvolumen-Pro-Minute-Machineller-BeatmungObservation.html}
 
@@ -100,9 +114,17 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 76009-0 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3} 
+	&  & code: 250875001 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 152004 \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -117,7 +139,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\
      \hline
 \end{longtable}
 
-\subsection{Beatmungsvolumenzeit auf hohem Druck} 
+\subsubsection{Beatmungsvolumenzeit auf hohem Druck} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/BeatmungszeitaufhohemDruckObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -129,9 +151,13 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 	\cline{3-3}
 	& & code: 40617009 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 76190-8 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3} 
+	&  & code:16929860  \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	\textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 		co6\_data\_decimal\_6\_3.val} \\
@@ -145,7 +171,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	\hline
 \end{longtable}
 
-\subsection{Beatmungsvolumenzeit auf niedrigem Druck} 
+\subsubsection{Beatmungsvolumenzeit auf niedrigem Druck} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/BeatmungszeitaufniedrigemDruckObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -157,9 +183,13 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 	\cline{3-3}
 	& & code: 40617009 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 76229-4 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3} 
+	&  & code:16929864  \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	\textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 		co6\_data\_decimal\_6\_3.val} \\
@@ -174,7 +204,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 \end{longtable}
 
 
-\subsection{Blutfluss durch cardiovasculäres Gerät} 
+\subsubsection{Blutfluss durch cardiovasculäres Gerät} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/BlutflussdurchcardiovasculresGertObservation.html}
 
@@ -187,9 +217,9 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 182744004 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://snomed.info/sct} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	 &  & code: 444479000 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -203,7 +233,7 @@ co6\_data\_decimal\_6\_3.val} \\
 \end{longtable}
 
 
-\subsection{Blutfluss extrakorporaler Gassaustausch} 
+\subsubsection{Blutfluss extrakorporaler Gassaustausch} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/BlutflussextrakorporalerGasaustauschObservation.html}
 
@@ -216,9 +246,9 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 	\cline{3-3}
 	& & code: 182744004 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://snomed.info/sct} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 251288004 \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	\textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 		co6\_data\_decimal\_6\_3.val} \\
@@ -231,7 +261,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	\hline
 \end{longtable}
 
-\subsection{Dauer Hämodialysesitzung} 
+\subsubsection{Dauer Hämodialysesitzung} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/DauerHmodialysesitzungObservation.html}
 
@@ -244,9 +274,9 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 	\cline{3-3}
 	& & code: 182744004 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://snomed.info/sct} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 445940005 \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	\textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 		co6\_data\_decimal\_6\_3.val} \\
@@ -259,7 +289,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	\hline
 \end{longtable}
 
-\subsection{Druckdifferenz Beatmung} 
+\subsubsection{Druckdifferenz Beatmung} 
 
  Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/DruckdifferenzBeatmungObservation.html}
 
@@ -272,9 +302,9 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	 &  & code: 76154-4 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -288,7 +318,7 @@ cm[H2O] - \texttt{co6\_config\_variables.unit}
 co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Dynamische Kompliance} 
+\subsubsection{Dynamische Kompliance} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/DynamischeKomplianceObservation.html}
 
@@ -301,9 +331,17 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 	\cline{3-3}
 	& & code: 40617009 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 60827-3 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3} 
+	&  & code: 250823005 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 151692 \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	\textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 		co6\_data\_decimal\_6\_3.val} \\
@@ -317,7 +355,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 		co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Eingestellter inspiratorischer Gasfluss} 
+\subsubsection{Eingestellter inspiratorischer Gasfluss} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/EingestellterinspiratorischerGasflussObservation.html}
 
@@ -330,9 +368,9 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 	\cline{3-3}
 	& & code: 40617009 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 76275-7 \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	\textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 		co6\_data\_decimal\_6\_3.val} \\
@@ -346,7 +384,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 		co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Einstellung-Einatmungszeit-Beatmung}
+\subsubsection{Einstellung Einatmungszeit Beatmung}
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Einstellung-Einatmungszeit-BeatmungObservation.html}
 
@@ -357,11 +395,19 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	meta & profile & https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/einstellung-einatmungszeit-beatmung \\ \hline 
 	status &  & final   \\ \hline 
 	category & coding & system: \url{http://snomed.info/sct} \\
-\cline{3-3}
+	\cline{3-3}
 	& & code: 40617009\\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 76334-2 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3} 
+	&  & code: 250819002 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 16929632 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -372,7 +418,7 @@ co6\_data\_decimal\_6\_3.val} \\
      \textbf{effectiveDateTime}  & & Datum und Uhrzeit der Messung: \texttt{co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Herzfrequenz} 
+\subsubsection{Herzfrequenz} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/HerzfrequenzObservation.html}
 
@@ -385,9 +431,17 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs\\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 8867-4 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3} 
+	&  & code: 364075005 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 147842 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -399,7 +453,7 @@ co6\_data\_decimal\_6\_3.val} \\
 co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Herzzeitvolumen} 
+\subsubsection{Herzzeitvolumen} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/HerzzeitvolumenObservation.html}
 
@@ -412,9 +466,17 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 8741-1 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3} 
+	&  & code: 82799009 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 150276 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -430,7 +492,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\
 \end{longtable}
 
 
-\subsection{Inspiratorischer Gasfluss} 
+\subsubsection{Inspiratorischer Gasfluss} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/InspiratorischerGasflussObservation.html}
 
@@ -443,9 +505,13 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 40617009 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 60794-5 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 151948 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -458,7 +524,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\
      \hline
 \end{longtable}
 
-\subsection{Inspiratorische Sauerstofffraktion eingestellt} 
+\subsubsection{Inspiratorische Sauerstofffraktion eingestellt} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Inspiratorische-Sauerstofffraktion-eingestellt--Observation.html}
 
@@ -471,9 +537,13 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 	\cline{3-3}
 	& & code: 40617009 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 19994-3 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3} 
+	&  & code: 250774007  \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	\textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 		co6\_data\_decimal\_6\_3.val} \\
@@ -487,7 +557,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	\hline
 \end{longtable}
 
-\subsection{Inspiratorische Sauerstofffraktion gemessen} 
+\subsubsection{Inspiratorische Sauerstofffraktion gemessen} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Inspiratorische-Sauerstofffraktion-gemessen--Observation-duplicate-2.html}
 
@@ -500,9 +570,13 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 	\cline{3-3}
 	& & code: 40617009 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 71835-3 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3} 
+	&  & code: 250774007 \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	\textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 		co6\_data\_decimal\_6\_3.val} \\
@@ -516,7 +590,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	\hline
 \end{longtable}
 
-\subsection{Intrakranieller Druck (ICP)} 
+\subsubsection{Intrakranieller Druck (ICP)} 
  Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Intrakranieller-Druck-ICP--Observation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -528,9 +602,17 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 60956-0 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3}
+	&  & code: 250844005 \\
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 153608 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -543,7 +625,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\
      \hline
 \end{longtable}
 
-\subsection{Ionisiertes Kalzium aus Nierenersatzverfahren} 
+\subsubsection{Ionisiertes Kalzium aus Nierenersatzverfahren} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/IonisiertesKalziumausNierenersatzverfahrenObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -555,9 +637,9 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://snomed.info/sct} \\
 \cline{3-3}
 	& & code: 182744004 \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	 &  & code: 83064-6 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -569,7 +651,7 @@ co6\_data\_decimal\_6\_3.val} \\
 co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Kopfumfang} 
+\subsubsection{Kopfumfang} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/KopfumfangObservation.html}
 
@@ -582,9 +664,13 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 	\cline{3-3}
 	& & code: vital-signs \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 9843-4 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3}
+	&  & code: 363811000 \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	\textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 		co6\_data\_decimal\_6\_3.val} \\
@@ -596,7 +682,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 		co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Körpergewicht} 
+\subsubsection{Körpergewicht} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/KoerpergewichtObservation.html}
 
@@ -609,9 +695,13 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 29463-7 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3}
+	&  & code: 27113001 \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -622,7 +712,7 @@ co6\_data\_decimal\_6\_3.val} \\
      \textbf{effectiveDateTime}  & & Datum und Uhrzeit der Messung: \texttt{co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Körpergröße} 
+\subsubsection{Körpergröße} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/KoerpergroesseObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -634,9 +724,13 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 8302-2 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3}
+	&  & code: 1153637007 \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -649,7 +743,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
 
-\subsection{Körpertemperatur Blut} 
+\subsubsection{Körpertemperatur Blut} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Koerpertemperatur-Blut--Observation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -661,9 +755,17 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\
 \cline{3-3}
 	& & code: vital-signs \\ \hline
-	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+	&  & code: 60834-9 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3}
+	&  & code: 860958002 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101\\ 
+	\cline{3-3}
+	&  & code: 188436 \\ \hline
 	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{
 co6\_data\_decimal\_6\_3.val} \\
@@ -675,7 +777,7 @@ co6\_data\_decimal\_6\_3.val} \\
 co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Körpertemperatur Kern} 
+\subsubsection{Körpertemperatur Kern} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/KoerpertemperaturKernObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -701,7 +803,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 		co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Körpertemperatur nasal} 
+\subsubsection{Körpertemperatur nasal} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Koerpertemperatur-nasal--Observation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -727,7 +829,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 		co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Körpertemperatur rektal} 
+\subsubsection{Körpertemperatur rektal} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Koerpertemperatur-rektal--Observation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -754,7 +856,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 \end{longtable}
 
 
-\subsection{Körpertemperatur Speiseröhre} 
+\subsubsection{Körpertemperatur Speiseröhre} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Koerpertemperatur-Speiseroehre--Observation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -781,7 +883,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 		co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Körpertemperatur Trommelfell}
+\subsubsection{Körpertemperatur Trommelfell}
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Koerpertemperatur-Trommelfell--Observation.html}
 
@@ -808,7 +910,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 		co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Maximaler Beatmungsdruck} 
+\subsubsection{Maximaler Beatmungsdruck} 
  Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/MaximalerBeatmungsdruckObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -835,7 +937,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
 
-\subsection{Mittlerer Beatmungsdruck} 
+\subsubsection{Mittlerer Beatmungsdruck} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/MittlererBeatmungsdruckObservation.html}
 
@@ -862,7 +964,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 		co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Positiv-endexpiratorischer Druck} 
+\subsubsection{Positiv-endexpiratorischer Druck} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Positiv-endexpiratorischerDruckObservation.html}
 
@@ -888,7 +990,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 \end{longtable}
 
 
-\subsection{Pulmonalarterieller wedge Blutdruck} 
+\subsubsection{Pulmonalarterieller wedge Blutdruck} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/PulmonalarteriellerwedgeBlutdruckObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -915,7 +1017,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\
    \hline
 \end{longtable}
 
-\subsection{Pulmonalvaskulärer Widerstandsindex} 
+\subsubsection{Pulmonalvaskulärer Widerstandsindex} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/PulmonalvaskulrerWiderstandsindexObservation.html}
 
@@ -945,7 +1047,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 \end{longtable}
 
 
-\subsection{Puls}
+\subsubsection{Puls}
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Puls--Observation.html}
 
@@ -972,7 +1074,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	\hline
 \end{longtable}
 
-\subsection{Sauerstoffgasfluss} 
+\subsubsection{Sauerstoffgasfluss} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/SauerstoffgasflussObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -1000,7 +1102,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\
 \end{longtable}
 
 
-\subsection{Sauerstoffsättigung im art. Blut durch Pulsoxymetrie} 
+\subsubsection{Sauerstoffsättigung im art. Blut durch Pulsoxymetrie} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Sauerstoffsttigungimart.BlutdurchPulsoxymetrieObs.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -1028,7 +1130,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\
 \end{longtable}
 
 
-\subsection{Spontane Atemfrequenz Beatmet} 
+\subsubsection{Spontane Atemfrequenz Beatmet} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Spontane-Atemfrequenz-BeatmetObservation.html}
 
@@ -1056,7 +1158,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
 
-\subsection{Spontane Mechanische Atemfrequenz Beatmet} 
+\subsubsection{Spontane Mechanische Atemfrequenz Beatmet} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Spontane-Mechanische-Atemfrequenz-BeatmetObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -1083,7 +1185,7 @@ co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
 
-\subsection{Substituatfluss} 
+\subsubsection{Substituatfluss} 
  Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/SubstituatflussObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -1108,7 +1210,7 @@ co6\_data\_decimal\_6\_3.val} \\
      \textbf{effectiveDateTime}  & & Datum und Uhrzeit der Messung: \texttt{co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Systemischer vaskulärer Widerstandsindex} 
+\subsubsection{Systemischer vaskulärer Widerstandsindex} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/SystemischervaskulrerWiderstandsindexObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -1135,7 +1237,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	\hline
 \end{longtable}
 
-\subsection{Unterstützungsdruck Beatmung} 
+\subsubsection{Unterstützungsdruck Beatmung} 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/UntersttzungsdruckBeatmungObservation.html}
 
 \begin{longtable}{|l|l|p{7.5cm}|}
@@ -1164,7 +1266,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	\hline
 \end{longtable}
 
-\subsection{Venöser Druck} 
+\subsubsection{Venöser Druck} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/VenserDruckObservation.html}
 
@@ -1190,7 +1292,7 @@ co6\_data\_decimal\_6\_3.val} \\
      \textbf{effectiveDateTime}  & & Datum und Uhrzeit der Messung: \texttt{co6\_data\_decimal\_6\_3.datetimeto} \\ \hline
 \end{longtable}
 
-\subsection{Zentralvenöser Druck} 
+\subsubsection{Zentralvenöser Druck} 
 
 Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/Zentralven-ser-Druck--Observation.html}
 
@@ -1206,7 +1308,7 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
 	\cline{3-3} 
 	 &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
-	 \textbf{subject}  & reference & Pseudonymisierte Patientennummer: \texttt{co6\_medic\_patient.patid} \\ \hline
+	 \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	 \textbf{valueQuantity}  & \textbf{value} & Wert der Messung: \texttt{co6\_data\_decimal\_6\_3.val} \\
         \cline{2-3}
          & system & http://unitsofmeasure.org \\
