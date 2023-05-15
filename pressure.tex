@@ -13,31 +13,59 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\ 
 \cline{3-3}
         & & code: vital-signs \\ \hline
-        code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\
-        \cline{3-3}
-         &  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+        code & coding & system: \url{http://loinc.org} \\ 
+        \cline{3-3} 
+        &  & code: 85354-9 \\ 
+        \cline{3-3} 
+        &  & system: \url{http://snomed.info/sct} \\ 
+        \cline{3-3} 
+        &  & code: 75367002 \\ \hline
         \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
         \textbf{effectiveDateTime} & & Datum und Uhrzeit der Messung:  \texttt{co6\_medic\_pressure.datetimeto} \\ \hline
 	\multicolumn{3}{|l|}{component} \\ \hline
-	code (Systolisch)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code (Systolisch) & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
+	&  & code: 8480-6 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3} 
+	&  & code: 271649006 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 150017 \\ \hline
 	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.systolic} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
 	\cline{2-3}
 	& \textbf{code} & mm[Hg] - \texttt{co6\_config\_variables.unit} \\ \hline
-	code (Mittel)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code (Mittel) & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
+	&  & code: 8478-0 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3} 
+	&  & code: 6797001 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 150019 \\ \hline	
 	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.mean} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
 	\cline{2-3}
 	& \textbf{code} &  mm[Hg] - \texttt{co6\_config\_variables.unit} \\ \hline
-	code (Diastolisch)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code (Diastolisch) & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
+	&  & code: 8462-4 \\ 
+	\cline{3-3} 
+	&  & system: \url{http://snomed.info/sct} \\ 
+	\cline{3-3} 
+	&  & code: 271650006 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 150018 \\ \hline	
 	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.diastolic} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
@@ -55,34 +83,50 @@ Profil: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Int
 	meta & profile & https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/StructureDefinition/
 	pulmonalarterieller-blutdruck \\ \hline 
 	status & & final  \\ \hline 
-	category & coding & system:  \\ 
+	category & coding & system: \url{http://terminology.hl7.org/CodeSystem/observation-category} \\ 
 \cline{3-3}
-        & & code:  \\ \hline
-        code & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\
+        & & code: vital-signs \\ \hline
+        code & coding & system: \url{http://loinc.org} \\ 
+        \cline{3-3} 
+        &  & code: 85354-9 \\ 
         \cline{3-3}
-         & & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline
+        &  & system: \url{http://snomed.info/sct} \\ 
+        \cline{3-3} 
+        &  & code: 75367002 \\ \hline
         \textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
         \textbf{effectiveDateTime} & & Datum und Uhrzeit der Messung:  \texttt{co6\_medic\_pressure.datetimeto} \\ \hline
 	\multicolumn{3}{|l|}{component} \\ \hline
-	code (Systolisch)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code (Systolisch) & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
+	&  & code: 8440-0 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 150045 \\ \hline
 	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.systolic} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
 	\cline{2-3}
 	& \textbf{code} & mm[Hg] - \texttt{co6\_config\_variables.unit} \\ \hline
-	code (Mittel)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code (Mittel) & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
+	&  & code: 8414-5 \\ 
+	\cline{3-3} 
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 150047 \\ \hline	
 	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.mean} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
 	\cline{2-3}
 	& \textbf{code} &  mm[Hg] - \texttt{co6\_config\_variables.unit} \\ \hline
-	code (Diastolisch)  & coding & system: Url von \ac{loinc}, \ac{snomedct}, und / oder \ac{ieee} \\ 
+	code (Diastolisch) & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code: \ac{loinc}, \ac{snomedct}, oder \ac{ieee} \\ \hline	
+	&  & code: 8385-7 \\ 
+	\cline{3-3}
+	&  & system: urn:iso:std:iso:11073:10101 \\ 
+	\cline{3-3}
+	&  & code: 150046 \\ \hline
 	\textbf{valueQuantity} & \textbf{value} & \texttt{co6\_medic\_pressure.diastolic} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 

@@ -6,10 +6,11 @@ Version 1.0.0
 
 \noindent Profile: \url{https://www.medizininformatik-initiative.de/Kerndatensatz/Modul_Intensivmedizin/IGMIIKDSModulICU.html}
 
-
 Das Erweiterungsmodul Intensivmedizin oder \ac{icu}, \acs{pdms}/Biosignale spezifiziert akutmedizinische Daten für die Primär- und Sekundärnutzung und hat Bezüge zu den Basismodulen. Ziel der Modellierung dieses Erweiterungsmoduls ist an erster Stelle die Datenabbildung der Intensivmedizin und die Darstellung gleichartiger Daten der Notfallmedizin, stationärer und ambulanter Medizin.
 
 \chapter{Biosignaldaten \acs{copra} \& \acs{fhir}} \label{ch:coprafhir}
+
+Ziel dieses Dokument ist die Dokumentation der benutzten Tabellen oder Ressourcen in dem \ac{dw} des \ac{diz} in Zusammenhang mit den \ac{fhir}-Profilen des Erweiterungsmodul Intensivmedizin für die Erzeugung der \ac{fhir}-Ressourcen.
 
 \section{Abbildung der Biosignaldaten in \acs{copra}} \label{sec:copra}
 
@@ -52,15 +53,15 @@ Die benötigte Daten an der Universitätsmedizin Mainz für die Erzeugung der \a
 	& & code: vital-signs \\ \hline
 	code & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code:  \\ 
+	&  & code: \ac{loinc}-Code \\ 
 	\cline{3-3} 
 	&  & system: \url{http://snomed.info/sct} \\ 
 	\cline{3-3}
-	&  & code:  \\ 
+	&  & code: \ac{snomedct}-Code \\ 
 	\cline{3-3} 
 	&  & system: urn:iso:std:iso:11073:10101 \\ 
 	\cline{3-3}
-	&  & code:  \\ \hline
+	&  & code: \ac{ieee}-Schlüssel \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	\textbf{valueQuantity} & \textbf{value} & Wert der Messung: \texttt{co6\_data\_decimal\_6\_3.val} \\
 	\cline{2-3}
@@ -91,29 +92,29 @@ Die benötigte Daten an der Universitätsmedizin Mainz für die Erzeugung der \a
 	& & code: vital-signs \\ \hline
 	code (Blutdruck) & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code:  \\ 
+	&  & code: \ac{loinc}-Code \\ 
 	\cline{3-3} 
 	&  & system: \url{http://snomed.info/sct} \\ 
 	\cline{3-3}
-	&  & code:  \\ 
+	&  & code: \ac{snomedct}-Code \\ 
 	\cline{3-3} 
 	&  & system: urn:iso:std:iso:11073:10101 \\ 
 	\cline{3-3}
-	&  & code:  \\ \hline
+	&  & code: \ac{ieee}-Schlüssel \\ \hline
 	\textbf{subject} & reference & Pseudonymisierte Patientennummer: \texttt{co6\_data\_string.val} wobei \texttt{co6\_data\_decimal\_6\_3.varID} = 1 und \texttt{co6\_data\_string.varID} = 8 \\ \hline
 	\textbf{effectiveDateTime} & & Datum und Uhrzeit am Anfang der Messung:  \texttt{co6\_medic\_pressure.datetimeto} \\ \hline
 	\multicolumn{3}{|l|}{component} \\ \hline
 	code (Systolisch) & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code:  \\ 
+	&  & code: \ac{loinc}-Code - systolisch \\ 
 	\cline{3-3} 
 	&  & system: \url{http://snomed.info/sct} \\ 
 	\cline{3-3}
-	&  & code:  \\ 
+	&  & code: \ac{snomedct}-Code - systolisch \\ 
 	\cline{3-3} 
 	&  & system: urn:iso:std:iso:11073:10101 \\ 
 	\cline{3-3}
-	&  & code:  \\ \hline	
+	&  & code: \ac{ieee}-Schlüssel - systolisch \\ \hline	
 	\textbf{valueQuantity} & \textbf{value} & Systolischer Wert: \texttt{co6\_medic\_pressure.systolic} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
@@ -121,15 +122,15 @@ Die benötigte Daten an der Universitätsmedizin Mainz für die Erzeugung der \a
 	& \textbf{code} & Mapping auf http://unitsofmeasure.org. z.B. mmHg - mm[Hg]: \texttt{co6\_config\_variables.unit} \\ \hline
 	code (Mittel) & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code:  \\ 
+	&  & code: \ac{loinc}-Code - mittel \\ 
 	\cline{3-3} 
 	&  & system: \url{http://snomed.info/sct} \\ 
 	\cline{3-3}
-	&  & code:  \\ 
+	&  & code: \ac{snomedct}-Code - mittel \\ 
 	\cline{3-3} 
 	&  & system: urn:iso:std:iso:11073:10101 \\ 
 	\cline{3-3}
-	&  & code:  \\ \hline	
+	&  & code: \ac{ieee}-Schlüssel - mittel \\ \hline	
 	\textbf{valueQuantity} & \textbf{value} & Mittlerer Wert: \texttt{co6\_medic\_pressure.mean} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
@@ -137,19 +138,18 @@ Die benötigte Daten an der Universitätsmedizin Mainz für die Erzeugung der \a
 	& \textbf{code} & Mapping auf http://unitsofmeasure.org. z.B. mmHg - mm[Hg]: \texttt{co6\_config\_variables.unit} \\ \hline
 	code (Diastolisch) & coding & system: \url{http://loinc.org} \\ 
 	\cline{3-3} 
-	&  & code:  \\ 
+	&  & code: \ac{loinc}-Code - diastolisch \\ 
 	\cline{3-3} 
 	&  & system: \url{http://snomed.info/sct} \\ 
 	\cline{3-3}
-	&  & code:  \\ 
+	&  & code: \ac{snomedct}-Code - diastolisch \\ 
 	\cline{3-3} 
 	&  & system: urn:iso:std:iso:11073:10101 \\ 
 	\cline{3-3}
-	&  & code:  \\ \hline	
+	&  & code: \ac{ieee}-Schlüssel - diastolisch \\ \hline	
 	\textbf{valueQuantity} & \textbf{value} & Diastolischer Wert: \texttt{co6\_medic\_pressure.diastolic} \\
 	\cline{2-3}
 	& system & http://unitsofmeasure.org \\ 
 	\cline{2-3}
 	& \textbf{code} & Mapping auf http://unitsofmeasure.org. z.B. mmHg - mm[Hg]: \texttt{co6\_config\_variables.unit} \\ \hline
 \end{longtable}
-\clearpage
